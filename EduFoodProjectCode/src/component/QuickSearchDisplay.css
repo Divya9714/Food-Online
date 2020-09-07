@@ -1,0 +1,275 @@
+*{
+      margin: 0px;
+      box-sizing: border-box;
+}
+
+.navbar-inverse{
+    background-color: rgb(156, 33, 33);
+}
+
+#logoe{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: rgb(228, 220, 220);
+}
+
+#mylogo{
+
+    height: 40px;
+    width:40px;
+    font-size:26px;
+    font-weight: bold;
+    color:red;
+    padding-top:14px;
+    padding-left:10px;
+    margin-left:6px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.image-responsive{
+    
+    background: linear-gradient(to bottom, rgba(154, 12, 14, 0), #4f0707),url('food-wallpaper.png');
+    background-repeat: cover;
+    border-style: solid ;
+    background-color: rgb(151, 83, 83);
+    background-size: cover;
+    height: 500px;
+    background-position:center;
+    box-shadow: rgb(172, 34, 34) 2px 6px 8px;
+    
+}
+
+
+#logo{
+   
+   background-color:white;
+   height: 140px;
+   width: 140px;
+   border-radius: 50%;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 40px;
+   
+
+  
+}
+#e{
+    
+    color:red;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    
+    
+}
+
+ .title{
+   text-align: center;
+   margin:auto;
+   color: white;
+   font-size: 36px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .locationselect{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 50px;
+  
+  }
+  
+  .dropdown{
+ 
+    height: 50px;
+    width:270px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    border:none;
+    outline:none;
+    padding:0px;
+    color:rgb(119, 11, 11);
+    margin-top:40px;
+    
+  }
+  
+ .nullvalue{
+
+    color:rgb(128, 128, 128);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ .search-box{
+  display: inline-flex;
+  color: rgb(119, 5, 24);
+  height: 50px;
+  margin-left:14px;
+  margin-top:4px;
+  
+
+ }
+
+ .search-btn:hover{
+   
+  background-color: rgb(131, 72, 199);
+}
+
+  .searchrestro{
+    width:220px;
+    border:none;
+    outline:none;
+    padding:0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+
+  
+  }
+  
+  .search-btn{
+    float:right;
+    color:white;
+    background-color:rgba(177, 11, 11, 0.959);
+    height:50px;
+    width:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+    margin-right: 15px;
+    
+}
+
+.glyphicon-search{
+  color:wheat;
+  
+}
+
+  
+  .quicksearchcontainer{
+  
+    margin-left:20px;
+    margin-top:25px;
+    
+  }
+  #searchheading{
+   
+   text-align: left;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size:30px;
+   font-weight:bold;
+   line-height: 2;
+   color:rgba(119, 5, 24);
+   text-shadow: #4f0707 0 4px 3px;
+   margin-right:60px;
+   
+  } 
+  
+  #subheading{
+    
+   text-align: left;
+   font-family: 'Times New Roman', Times, serif;
+   line-height:0;
+   font-size: 20px;
+   color:gray;
+   opacity: 80%;
+   letter-spacing:normal;
+   font-weight: normal;
+   margin-bottom: 40px;
+  
+  }
+
+.quicksearchcontainer{
+
+    margin-left:20px;
+    margin-top:25px;
+    
+  }
+
+  #searchheading{
+   
+   text-align: left;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size:30px;
+   font-weight:bold;
+   line-height: 2;
+   color:rgba(119, 5, 24);
+   text-shadow: #4f0707 0 4px 3px;
+   margin-right:60px;
+   
+  } 
+  
+  #subheading{
+    
+   text-align: left;
+   font-family: 'Times New Roman', Times, serif;
+   line-height:0;
+   font-size: 20px;
+   color:gray;
+   opacity: 80%;
+   letter-spacing:normal;
+   font-weight: normal;
+   margin-bottom: 40px;
+  
+  }
+
+  .meal{
+ 
+   box-shadow: grey 0 3px 6px;
+   margin-left: 34px;
+   margin-right:auto;
+   margin-bottom: 20px;
+   width: 320px;
+   height: 160px;
+   border-radius: 5%;
+   display: inline-flex;
+   background-color:rgba(226, 214, 214, 0.993);
+  }
+  
+  .foodonline{
+      width:50%;
+      background-color:rgb(119, 5, 24);
+   
+  }
+  .foodonline>img{
+      height:160px;
+      width:160px;
+  }
+
+  .typeofmeal{
+      
+      margin-top:20px;
+      text-decoration: none;
+    
+
+  }
+  
+  .whatfood{
+  
+   margin-top:10px;
+   color:rgb(119, 5, 24);
+   font-weight: bold;
+   font-size: 20px;
+   border-bottom-style: dashed;
+   text-align: center;
+   margin-left:auto;
+   ;
+  }
+  
+  .mealexplaination{
+  
+   text-align:justify;
+   padding-top: 10px;
+   margin-left: 10px;
+   font-size:15px;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color: grey;
+   
+  
+  }
+ body{
+     background-color:lavenderblush;
+ }
+

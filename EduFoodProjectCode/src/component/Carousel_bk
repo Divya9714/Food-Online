@@ -1,0 +1,51 @@
+import React, { cloneElement }  from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
+
+var MyCarousel=(props) =>{
+
+    var Pics=({pic})=>{
+        console.log({pic})
+    if(pic){
+        return pic.map((item)=>{
+
+        return(
+            <Carousel>
+
+                <div>
+
+                    <img className="img-responsive" src={item.thumb}/>
+                    
+                </div>
+              
+            </Carousel>
+        )
+    })
+}
+
+}
+return(
+<div>
+    {Pics(props)}
+    
+    </div>
+)
+}       
+     
+
+export default MyCarousel;
+
+
+
+
+ let start;
+    let end;
+    start = Number(page * 2) - 2;
+    end = Number(page * 2);
+
+
+
+    const count = result.length / 2;
+        const resultValues = result.slice(start, end);

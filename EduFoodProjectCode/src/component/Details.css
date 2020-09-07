@@ -1,0 +1,110 @@
+.navbar-inverse{
+    background-color: rgb(156, 33, 33);
+}
+
+#logoe{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: rgb(228, 220, 220);
+}
+
+#mylogo{
+
+    height: 40px;
+    width:40px;
+    font-size:26px;
+    font-weight: bold;
+    color:red;
+    padding-top:14px;
+    padding-left:10px;
+    margin-left:6px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.image-responsive{
+    background-image: url(drinks.png);
+    background-repeat: cover;
+    border-style: solid ;
+    background-color: rgb(151, 83, 83);
+    color:white;
+    background-size: cover;
+    height: 400px;
+    margin-left: 50px;
+    background-position:center;
+    box-shadow: rgb(172, 34, 34) 2px 6px 8px;
+
+}
+.image-responsive a:hover{
+    
+    background-color: rgb(226, 173, 73, 0.5)
+}
+.image-responsive a:active{
+    background-color: rgb(170, 43, 26);
+    color: white;
+}
+
+#innerimage{
+    text-align: center;
+    color:blue;
+    font-weight: bold;
+    font-size: 15px;
+    background-color:rgba(248, 246, 246, 0.8);
+    height:40px;
+    width:150px;
+    float:right;
+    margin-right:30px;
+    margin-top: 300px;
+}
+#Rname {
+    margin-left:36px;
+    color:#192f60;
+    text-shadow:  rgb(172, 34, 34) 10px 14px 18px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:40px;
+}
+
+.tab-content{
+    margin-left:40px;
+}
+.nav-tabs li:hover{
+    background-color: brown;
+}
+.nav-tabs{
+    font-size:16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left:34px;
+}
+.nav-tabs a{
+    color: rgb(207, 171, 171);
+    font-weight: bold;
+    background-color: crimson;
+}
+
+.nav-tabs li:active{
+    background-color: darkgreen;
+}
+
+.tab-content h3{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: grey 2px 2px 2px;
+
+}
+.pastacake{
+    
+    color: crimson;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.tab-content h5{
+    font-weight: bold;
+}
+.info{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+

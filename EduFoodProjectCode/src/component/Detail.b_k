@@ -1,0 +1,211 @@
+import React,{Component} from 'react';
+import axios from 'axios';
+import RestroDisplay from './RestroDetailsdisplay';
+
+
+var restrodetail = "http://localhost:8900/restaurantlist";
+
+        class Details extends Component{
+
+            constructor(props){
+
+                super(props)
+
+                      this.state={
+
+                             citiesID: parseInt(sessionStorage.getItem('citiesID'))? parseInt(sessionStorage.getItem('citiesID')):1,
+                                  //data is stored here//
+                                 restrolist:[],
+                                 cuisine:'',
+                                 test:''
+                              }
+
+                             }
+      cuisineFilter=(event)=>{
+
+
+          sessionStorage.setItem('mealtypeID',this.props.match.params.id)
+
+          var mealtypeID= parseInt(this.props.match.params.id)
+      
+            var cuisine=parseInt(event.target.value)
+
+            var url;
+            if(cuisine=="0"){
+                url=`${restrodetail}/${this.state.citiesID}/${mealtypeID}`   
+             }
+             else{
+                 url=`${restrodetail}/${this.state.citiesID}/${mealtypeID}?cuisine=${cuisine}`
+             }
+
+         axios.get(url)
+
+       .then((response)=>{this.setState({restrolist:response.data})})
+          
+      }
+
+      CostFilter=(event)=>{
+        var mealtypeID= parseInt(this.props.match.params.id)
+        var pricerange=(event.target.value).split(',')
+        var lcost=parseInt(pricerange[0]);
+        var hcost=parseInt(pricerange[1]);
+        var url;
+
+        if(event.target.value==""){
+            url=`${restrodetail}/${this.state.citiesID}/${mealtypeID}`
+
+        }
+        else {
+            url=`${restrodetail}/${this.state.citiesID}/${mealtypeID}?hcost=${hcost}&lcost=${lcost}`
+        }
+
+
+
+
+        axios.get(url)
+
+        .then((response)=>{this.setState({restrolist:response.data})})
+           
+       }
+    
+    
+
+    
+
+      render(){
+
+          
+    
+                  return(
+                          <div> 
+                                <div class="container-fluid">
+                                
+                                   <div class="row">
+
+                                   <div class="col-sm-3 col-md-3 col-lg-3">
+                                       
+                                   <div class="Filters"><h3>Filters</h3></div>
+                                   
+                                        <div class="Select-Location">Select Location</div>
+                                            <select class="select">
+                                               <option value="0">Select</option>
+                                            
+
+                                          </select>
+                                      
+                                           <h3>Cuisine</h3>
+                                       <hr/>
+                             <div onChange={this.cuisineFilter}>
+
+                             <label className="radio">
+                                <input type="radio" value="0" name="cuisine"/>All
+                            </label>     
+                    
+                          <label className="radio">
+                                <input type="radio" value="1" name="cuisine"/>North
+                            </label>
+                            <label className="radio">
+                                <input type="radio" value="2" name="cuisine"/>South
+                            </label>
+                            <label className="radio">
+                                <input type="radio" value="3" name="cuisine"/>Chinese   
+                            </label>
+                            <label className="radio">
+                                <input type="radio" value="4" name="cuisine"/>Fast Food 
+                            </label>
+                            <label className="radio">
+                                <input type="radio" value="5" name="cuisine"/>Street Food
+                            </label>  
+                        </div> 
+
+                        <hr/>
+                                  
+                                         <h3>Cost for two</h3>
+                                       <br/>
+
+                            <div onChange={this.CostFilter}>
+
+                                   {/* //values are to be comma seperated */}
+
+                                <label className="radio">
+                                <input type="radio" value="" name="cost"/>All
+                                </label>     
+
+                                <label className="radio">
+                                <input type="radio" value="0,500" name="cost"/>Less than ₹500
+                                </label>
+                                <label className="radio">
+                                <input type="radio" value="500,1000" name="cost"/>₹500-₹1000
+                                </label>
+                                <label className="radio">
+                                <input type="radio" value="1000,1500" name="cost"/>₹1000-₹1500
+                                </label>
+                                <label className="radio">
+                                <input type="radio" value="1500,2000" name="cost"/>₹1500-₹2000
+                                </label>
+                                <label className="radio">
+                                <input type="radio" value="2000,3000" name="cost"/>₹2000+
+                                </label>  
+                                </div> 
+{/* 
+                            <div class="Sort-option"><h3>Sort</h3></div>
+
+                      <div onChange={this.sortFilter}>
+
+                        <label className="radio">
+                        <input type="radio" value="low" name="sort" />Price low to high
+                        </label>
+                    </div>
+                    <div class="block">
+                        <label className="radio">
+                        <input type="radio" value="high" name="sort" />Price high to low
+                        </label>
+                    </div> */}
+
+                        </div>
+                  
+                                    
+                          <div class="col-sm-9 col-md-9 col-lg-9">
+                                 <RestroDisplay restrodata={this.state.restrolist}/>
+
+                         
+                           </div>
+                           </div>
+                           </div>
+                           </div>
+        )
+    }
+
+
+componentDidMount(){
+
+            //defining variable//
+          sessionStorage.setItem('mealtypeID',this.props.match.params.id)
+
+          var mealtypeID= parseInt(this.props.match.params.id)
+           
+          //console the url for confrmation whether it's right url or not//
+         console.log(`${restrodetail}/${this.state.citiesID}/${mealtypeID}`)
+
+         axios.get(`${restrodetail}/${this.state.citiesID}/${mealtypeID}`)
+
+             //setstte of details of restrolist to response.data
+
+       .then((response)=>{this.setState({restrolist:response.data})})
+}   
+
+componentDidUpdate(){
+
+    console.log("update")
+  
+}
+}
+
+export default Details;
+
+
+
+case with link?? why we got object object??
+coz it is iterating over a array and link is not coming as a component in option its not render a comoponent.
+
+when it dont render a component what to do??
